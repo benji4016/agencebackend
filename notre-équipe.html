@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notre Équipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 20px;
+            padding: 0;
+            color: #333;
+        }
+        .team-section {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+        .team-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #222;
+        }
+        .team-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+            width: 250px;
+        }
+        .team-member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .member-name {
+            margin-top: 15px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #444;
+        }
+        .member-desc {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: #666;
+        }
+        @media (max-width: 800px) {
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-member {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+            .team-member img {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="team-section">
+  <h2>Notre Équipe</h2>
+  <p class="team-intro">
+  <div class="team-container">
+    <div class="team-member">
+      <img src="image1.jpg" alt="Julie Dupond" />
+      <div class="member-name">Julie Dupond</div>
+      <div class="member-desc">
+        Consectetur adipiscing elit. Donec sed leo in nisi vehicula bibendum.
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="image2.jpg" alt="Romeo Sylla" />
+      <div class="member-name">Romeo Sylla</div>
+      <div class="member-desc">
+        Consectetur adipiscing elit. Donec sed leo in nisi vehicula bibendum.
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="image3.jpg" alt="Javier Bardem" />
+      <div class="member-name">Javier Bardem</div>
+      <div class="member-desc">
+        Consectetur adipiscing elit. Donec sed leo in nisi vehicula bibendum.
+      </div>
+    </div>
+  </div>
+</section>

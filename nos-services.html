@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nos Services - AgencEco</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+
+  <!-- Inclusion du header -->
+  <header data-include="partials/header.html"></header>
+
+  <main>
+    <h1>Nos Services</h1>
+    <section class="services">
+      <div class="service">
+        <i class="fas fa-leaf fa-3x"></i>
+        <h2>Conseils éco-responsables</h2>
+        <p>Nous vous accompagnons pour rendre votre entreprise plus durable et respectueuse de l'environnement.</p>
+        <button>Contactez-nous</button>
+      </div>
+      <div class="service">
+        <i class="fas fa-bolt fa-3x"></i>
+        <h2>Audits énergétiques</h2>
+        <p>Analyse complète de votre consommation pour optimiser vos dépenses énergétiques.</p>
+        <button>En savoir plus</button>
+      </div>
+      <div class="service">
+        <i class="fas fa-chalkboard-teacher fa-3x"></i>
+        <h2>Formations</h2>
+        <p>Sensibilisez vos équipes aux enjeux de la transition écologique avec nos formations certifiées.</p>
+        <button>Je m'informe</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Inclusion du footer -->
+  <footer data-include="partials/footer.html"></footer>
+
+  <!-- Script d'inclusion -->
+  
+<script>
+  function includeHTML() {
+    const includes = document.querySelectorAll('[data-include]');
+    includes.forEach(el => {
+      const file = el.getAttribute('data-include');
+      if (file) {
+        fetch(file)
+          .then(response => {
+            if (!response.ok) throw new Error('Fichier non trouvé: ' + file);
+            return response.text();
+          })
+          .then(data => {
+            el.innerHTML = data;
+          })
+          .catch(err => {
+            console.error(err);
+          });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', includeHTML);
+</script>
+
+
+</body>
+</html>
